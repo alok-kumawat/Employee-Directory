@@ -32,12 +32,22 @@ Employee Directory is a web application that allows users to manage employee det
 ### 🏠 Home Page
 ![Home Page](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(64).png)
 ![](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(65).png)
+![](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(77).png)
 
 ### 🏢 Employee Details Page
-![Employee Details](screenshots/employee-details.png)
+![Employee Details](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(66).png)
+![](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(67).png)
+![](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(68).png)
+![](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(69).png)
+![](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(70).png)
 
 ### 📈 Performance Reviews Page
-![Performance Reviews](screenshots/performance-reviews.png)
+![Performance Reviews](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(71).png)
+![](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(72).png)
+![](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(73).png)
+![](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(74).png)
+![](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(75).png)
+![](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(76).png)
 
 ## 📂 Folder Structure
 ```

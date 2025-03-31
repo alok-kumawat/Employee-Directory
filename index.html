@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Directory</title>
+    <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/jpg"> <!-- This is Favicon of my website -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- CSS file of my website -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!-- Animate CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- I Use Chart.js -->
+</head>
+<body>
+    <div class="background-decoration"></div>
+    <!-- Navbar of my website -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-container">
+                <img src="assets/images/logo.jpg" alt="Company Logo" class="company-logo"> <!-- Logo of my website -->
+                <h1 class="logo animate__animated animate__fadeIn">EMPLOYEE DIRECTORY</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Directory</a>
+                <a href="performance-reviews.html">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Header section of my website -->
+    <header class="page-header">
+        <div class="container">
+            <div class="header-content animate__animated animate__fadeInUp">
+                <h2>Welcome to Employee Directory</h2>
+                <p>It is a Platform to Manage and Track Employees Information and Performance</p>
+                <div class="header-stats">
+                    <div class="stat-item animate__animated animate__fadeIn animate__delay-1s">
+                        <img src="assets/images/team-icon.svg" alt="Team" class="stat-icon">
+                        <span class="stat-value">69+</span>
+                        <span class="stat-label">Team Members</span>
+                    </div>
+                    <div class="stat-item animate__animated animate__fadeIn animate__delay-1s">
+                        <img src="assets/images/department-icon.svg" alt="Departments" class="stat-icon">
+                        <span class="stat-value">9</span>
+                        <span class="stat-label">Departments</span>
+                    </div>
+                    <div class="stat-item animate__animated animate__fadeIn animate__delay-1s">
+                        <img src="assets/images/growth-icon.svg" alt="Growth" class="stat-icon">
+                        <span class="stat-value">33%</span>
+                        <span class="stat-label">YoY Growth</span>
+                    </div>
+                </div>
+            </div>
+            <img src="assets/images/team-illustration.svg" alt="Team Illustration" class="header-image animate__animated animate__fadeInRight">
+        </div>
+        <div class="header-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </header>
+
+    <!-- Main section of my website -->
+    <main class="container">
+        <div class="controls animate__animated animate__fadeIn animate__delay-1s">
+            <div class="search-box">
+                <input type="text" id="jobTitleFilter" placeholder="Filter by Job Title...">
+                <img src="assets/images/search-icon.svg" alt="Search" class="search-icon">
+            </div>
+            <div class="filters">
+                <button id="sortDepartment" class="secondary-button">
+                    <img src="assets/images/sort-icon.svg" alt="Sort" class="button-icon">
+                    Sort by Department
+                </button>
+            </div>
+        </div>
+
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <img src="assets/images/empty-state.svg" alt="No results" class="empty-state-image">
+            <p>No employees found for this job title</p>
+        </div>
+
+        <div class="table-responsive animate__animated animate__fadeIn animate__delay-1s">
+            <table class="employee-table"> <!-- Table of employees -->
+                <thead>
+                    <tr>
+                        <th>
+                            <img src="assets/images/profile-icon.svg" alt="Profile" class="table-icon">
+                            Employee Name
+                        </th>
+                        <th>
+                            <img src="assets/images/building-icon.svg" alt="Department" class="table-icon">
+                            Department
+                        </th>
+                        <th>
+                            <img src="assets/images/briefcase-icon.svg" alt="Job" class="table-icon">
+                            Job Title
+                        </th>
+                        <th>
+                            <img src="assets/images/calendar-icon.svg" alt="Date" class="table-icon">
+                            Hire Date
+                        </th>
+                        <th>
+                            <img src="assets/images/actions-icon.svg" alt="Actions" class="table-icon">
+                            Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody">
+                    <!-- Here I will insert Employee rows dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- Footer Section of my website -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Created by: Alok Kumawat</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/datas.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

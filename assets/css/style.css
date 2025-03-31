@@ -1,0 +1,1039 @@
+/* It is the Base styles of my website */
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary-color: #64748b;
+    --background-color: #f8fafc;
+    --surface-color: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --border-color: #e2e8f0;
+    --success-color: #22c55e;
+    --warning-color: #eab308;
+    --error-color: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: var(--text-primary);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* This is the Navbar Styles of my website */
+.navbar {
+    background-color: var(--surface-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: var(--primary-color);
+    background-color: rgba(37, 99, 235, 0.1);
+}
+
+/* This is the Controls Styles of my website */
+.controls {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.search-box input {
+    width: 300px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+}
+
+.filters {
+    display: flex;
+    gap: 0.5rem;
+}
+
+select {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    background-color: var(--surface-color);
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primary-button:hover {
+    background-color: var(--primary-hover);
+}
+
+.secondary-button {
+    background-color: var(--border-color);
+    color: var(--text-secondary);
+    transition: all 0.2s ease-in-out;
+}
+
+.secondary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* It is Employee Grid Section Styles of my website */
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.employee-card {
+    background-color: var(--surface-color);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.employee-card:hover {
+    transform: translateY(-2px);
+}
+
+.employee-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.initials {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.employee-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.employee-info p {
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.view-details {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* It is Employee Details Page Styles of my website */
+.back-button a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+    margin: 1rem 0;
+}
+
+.back-button a:hover {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+}
+
+.employee-profile {
+    background-color: var(--surface-color);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-in-out;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-avatar {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.profile-avatar .avatar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.profile-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.profile-info p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.detail-section {
+    background-color: var(--surface-color);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.detail-section h3 {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.detail-section p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+.detail-section p span:first-child {
+    color: var(--text-secondary);
+    min-width: 120px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+}
+
+.projects-list {
+    margin-top: 1rem;
+}
+
+.project-item {
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.project-item:hover {
+    transform: translateX(5px);
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+/* It is Recent Reviews Section Styles of Employee Details Page */
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.review-card {
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.review-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.review-period {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.review-rating {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.review-comments {
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* It is Hover effect for review cards */
+.review-card:hover .review-rating {
+    background-color: var(--primary-hover);
+}
+
+/* It is Performance Reviews Page Styles of my website */
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background-color: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h4 {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* It is Table Styles of Main Index Page of my website */
+.table-responsive {
+    overflow-x: auto;
+    margin: 2rem 0;
+    background-color: var(--surface-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.employee-table th {
+    background-color: var(--background-color);
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.employee-table th:hover {
+    background-color: #f1f5f9;
+}
+
+.employee-table tbody tr {
+    transition: transform 0.2s;
+}
+
+.employee-table tbody tr:hover {
+    transform: translateX(5px);
+    background-color: #f8fafc;
+}
+
+.employee-table td {
+    vertical-align: middle;
+}
+
+.employee-table .actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.employee-table .view-details {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: rgba(37, 99, 235, 0.1);
+}
+
+.employee-table .view-details:hover {
+    background-color: rgba(37, 99, 235, 0.2);
+}
+
+/* It is Employee Table Styles used for Main Index Page and Employee Details Page of my website */
+.employee-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.action-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.action-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+}
+
+.employee-table td {
+    vertical-align: middle;
+    padding: 1rem;
+    color: var(--text-primary);
+}
+
+.employee-table th {
+    padding: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background-color: var(--surface-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* It is Table Hover Effects used for Main Index Page and Employee Details Page of my website */
+.employee-table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.employee-table tbody tr:hover {
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+.employee-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* It is Modal(Add New Review) Styles of Employee Details Page of my website */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--surface-color);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* It is Performance Reviews Page Styles*/
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.dashboard-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-card {
+    background-color: var(--surface-color);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card h3 {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    text-align: center;
+}
+
+.metric {
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+}
+
+.metric-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-excellent {
+    background-color: rgba(34, 197, 94, 0.1);
+    color: var(--success-color);
+}
+
+.status-good {
+    background-color: rgba(234, 179, 8, 0.1);
+    color: var(--warning-color);
+}
+
+.status-warning {
+    background-color: rgba(249, 115, 22, 0.1);
+    color: #f97316;
+}
+
+.status-poor {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--error-color);
+}
+
+.review-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.review-table th,
+.review-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.review-table th {
+    background-color: var(--background-color);
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: left;
+}
+
+.review-table tbody tr:hover {
+    background-color: var(--background-color);
+}
+
+/* Image and Animation Styles */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.page-header {
+    background: linear-gradient(135deg, var(--background-color) 0%, var(--surface-color) 100%);
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.header-image {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 400px;
+    width: 40%;
+    opacity: 0.9;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+}
+
+.button-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+}
+
+/* Custom Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.fade-up {
+    animation: fadeUp 0.5s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .modal-content {
+        margin: 1rem;
+    }
+
+    .dashboard-controls {
+        flex-direction: column;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metrics-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .header-image {
+        display: none;
+    }
+
+    .page-header {
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    .header-content {
+        max-width: 100%;
+    }
+
+    .company-logo {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .employee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Background Decoration */
+.background-decoration {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Header Stats */
+.header-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* Header Shapes */
+.header-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+.shape-1 {
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 150px;
+    height: 150px;
+    top: 40%;
+    right: -50px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.shape-3 {
+    width: 70px;
+    height: 70px;
+    bottom: -20px;
+    left: 30%;
+    animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Table Icons */
+.table-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    opacity: 0.7;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    background: var(--surface-color);
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+}
+
+.empty-state-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+.empty-state p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Enhanced Hover Effects */
+.stat-item,
+.employee-table tbody tr,
+.secondary-button {
+    transition: all 0.3s ease-in-out;
+}
+
+.stat-item:hover {
+    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.1);
+}
+
+.employee-table tbody tr:hover {
+    transform: translateX(5px);
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+.secondary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .stat-item {
+        padding: 1rem;
+    }
+
+    .shape {
+        display: none;
+    }
+
+    .empty-state-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Empty State Improvements */
+.empty-state {
+    background-color: var(--surface-color);
+    border-radius: 0.5rem;
+    padding: 3rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.empty-state img {
+    width: 200px;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+.empty-state p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin: 0;
+}

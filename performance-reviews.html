@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/jpg"> <!-- This is Favicon of my website -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- CSS file of my website -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- I Use Chart.js -->
+</head>
+<body>
+    <!-- Navbar Section of my website -->
+    <nav class="navbar">
+        <div class="container">
+            <img src="assets/images/logo.jpg" alt="Company Logo" class="company-logo">
+            <h1 class="logo">EMPLOYEE DASHBOARD</h1>
+            <div class="nav-links">
+                <a href="index.html">Directory</a>
+                <a href="performance-reviews.html" class="active">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Section of my website -->
+    <main class="container">
+        <!-- Back Button -->
+        <div class="back-button">
+            <a href="index.html">← Back</a>
+        </div>
+        
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+            <h2>Performance and Reviews</h2>
+            <button id="addReviewBtn" class="primary-button">Add New Review</button>
+        </div>
+        
+        <!-- Performance Overview Section -->
+        <div class="dashboard-grid">
+            <!-- Key Metrics Card -->
+            <div class="dashboard-card">
+                <h3>Key Metrics</h3>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <span class="metric-value" id="avgRating">0.0</span>
+                        <span class="metric-label">Average Rating</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value" id="totalReviews">0</span>
+                        <span class="metric-label">Total Reviews</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value" id="improvementNeeded">0</span>
+                        <span class="metric-label">Need Improvement</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Trends Card -->
+            <div class="dashboard-card">
+                <h3>Performance Trends</h3>
+                <canvas id="trendsChart"></canvas>
+            </div>
+
+            <!-- Department Performance Card -->
+            <div class="dashboard-card">
+                <h3>Department Performance</h3>
+                <canvas id="departmentChart"></canvas>
+            </div>
+
+            <!-- Rating Distribution Card -->
+            <div class="dashboard-card">
+                <h3>Rating Distribution</h3>
+                <canvas id="distributionChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Search and Filters -->
+        <div class="dashboard-controls">
+            <div class="search-box">
+                <input type="text" id="employeeSearch" placeholder="Search employees...">
+            </div>
+            <div class="filters">
+                <select id="periodFilter">
+                    <option value="">All Periods</option>
+                    <option value="2025-Q1">2025 Q1</option>
+                    <option value="2024-Q4">2024 Q4</option>
+                    <option value="2024-Q3">2024 Q3</option>
+                </select>
+                <select id="performanceFilter">
+                    <option value="">All Ratings</option>
+                    <option value="5">Outstanding (5)</option>
+                    <option value="4">Exceeds Expectations (4)</option>
+                    <option value="3">Meets Expectations (3)</option>
+                    <option value="2">Needs Improvement (2)</option>
+                    <option value="1">Unsatisfactory (1)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Recent Performance Reviews Table Section -->
+        <div class="dashboard-card">
+            <h3>Recent Performance Reviews</h3>
+            <div class="table-responsive">
+                <table class="review-table">
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Department</th>
+                            <th>Period</th>
+                            <th>Rating</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reviewTableBody">
+                        <!-- Here I will insert Reviews data of employee dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- (Add New Review) Review Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <h3>New Performance Review</h3>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label for="reviewEmployee">Employee</label>
+                    <select id="reviewEmployee" required></select>
+                </div>
+                <div class="form-group">
+                    <label for="reviewPeriod">Review Period</label>
+                    <select id="reviewPeriod" required>
+                        <option value="2025-Q1">2025 Q1</option>
+                        <option value="2024-Q4">2024 Q4</option>
+                        <option value="2024-Q3">2024 Q3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reviewRating">Performance Rating</label>
+                    <select id="reviewRating" required>
+                        <option value="5">Outstanding (5)</option>
+                        <option value="4">Exceeds Expectations (4)</option>
+                        <option value="3">Meets Expectations (3)</option>
+                        <option value="2">Needs Improvement (2)</option>
+                        <option value="1">Unsatisfactory (1)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reviewComments">Comments</label>
+                    <textarea id="reviewComments" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="secondary-button" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="primary-button">Submit Review</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="assets/js/datas.js"></script>
+    <script src="assets/js/performance-data.js"></script>
+    <script src="assets/js/performance-reviews.js"></script>
+</body>
+</html>

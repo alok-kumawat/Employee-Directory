@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <link rel="shortcut icon" href="assets/images/logo.jpg" type="image/jpg"> <!-- This is Favicon of my website -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- CSS file of my website -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> <!-- Animate CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- I Use Chart.js -->
+</head>
+<body>
+    <!-- Navbar of my website -->
+    <nav class="navbar">
+        <div class="container">
+            <img src="assets/images/logo.jpg" alt="Company Logo" class="company-logo">
+            <h1 class="logo">EMPLOYEE DETAILS</h1>
+            <div class="nav-links">
+                <a href="index.html">Directory</a>
+                <a href="performance-reviews.html">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content of Employee Details Page -->
+    <main class="container">
+        <!-- Back Button -->
+        <div class="back-button">
+            <a href="index.html">← Back</a>
+        </div>
+
+        <!-- Employee Profile -->
+        <div class="employee-profile">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <span class="avatar" id="employeeAvatar"></span>
+                </div>
+                <div class="profile-info">
+                    <h2 id="employeeName"></h2>
+                    <p id="employeeTitle"></p>
+                    <p id="employeeDepartment"></p>
+                </div>
+            </div>
+
+            <!-- Employee Details -->
+            <div class="profile-details">
+                <div class="detail-section">
+                    <h3>Contact Information</h3>
+                    <p>Email: <span id="employeeEmail"></span></p>
+                    <p>Phone: <span id="employeePhone"></span></p>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Employment Details</h3>
+                    <p>Hire Date: <span id="employeeHireDate"></span></p>
+                    <p>Employee ID: <span id="employeeId"></span></p>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Skills</h3>
+                    <div id="skillsList" class="skills-list">
+                        <!-- Here I will insert the skills of employee dynamically -->
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Projects</h3>
+                    <div id="projectsList" class="projects-list">
+                        <!-- Here I will insert the projects of employee dynamically -->
+                    </div>
+                </div>
+
+                <!-- Performance Overview -->
+                <div class="detail-section">
+                    <h3>Performance Overview</h3>
+                    <div class="performance-chart">
+                        <canvas id="performanceChart"></canvas>
+                        <!-- Here I will insert the performance of employee using Chart.js -->
+                    </div>
+                </div>
+
+                <!-- Recent Reviews -->
+                <div class="detail-section">
+                    <h3>Recent Reviews</h3>
+                    <div id="recentReviews" class="reviews-list">
+                        <!-- Here I will insert the reviews of employee dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/datas.js"></script>
+    <script src="assets/js/performance-data.js"></script>
+    <script src="assets/js/employee-details.js"></script>
+</body>
+</html>

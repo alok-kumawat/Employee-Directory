@@ -30,7 +30,8 @@ Employee Directory is a web application that allows users to manage employee det
 
 ## 📸 Screenshots
 ### 🏠 Home Page
-![Home Page](screenshots/homepage.png)
+![Home Page](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(64).png)
+![](https://github.com/alok-kumawat/Employee-Directory/blob/main/Screenshot/Screenshot%20(65).png)
 
 ### 🏢 Employee Details Page
 ![Employee Details](screenshots/employee-details.png)
